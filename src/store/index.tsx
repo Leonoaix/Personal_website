@@ -15,6 +15,13 @@ const store = configureStore({
     reducer: { 
         globalStore: persistedReducer, 
     },
+    //内置函数有非序列化问题。
+    middleware: (getDefaultMiddleware) =>
+        getDefaultMiddleware({
+          serializableCheck: {
+            ignoredActions: ['persist/PERSIST', 'persist/REHYDRATE'],
+          },
+        }),
 });
 
 const persistor = persistStore(store)

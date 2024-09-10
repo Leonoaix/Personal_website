@@ -9,7 +9,7 @@ const globalStore = createSlice({
     //如果有promise请求正在进行，loading为true，请求结束则loading为false
     loading: false,
     //这里添加一下需要放在localStorage中的用户状态信息
-    user: null, 
+    user: {}, 
   },
   reducers: {
     changeLoading(state, action: PayloadAction<boolean>){
