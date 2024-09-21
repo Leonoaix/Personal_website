@@ -3,6 +3,7 @@ import Login from '@/pages/Login/index.tsx';
 import Dashboard from '@/pages/DashBoard/index.tsx';
 import Register from '@/pages/Register/index.tsx';
 import NotFound from '@/pages/Error/notFound';
+import DesignPage from '@/pages/DesignPage';
 
 /**
  * 静态路由配置
@@ -15,6 +16,7 @@ const StaticRouters = () => {
       <Route path="/" element={<Dashboard />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
+      <Route path='/design' element={<DesignPage />}></Route>
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
