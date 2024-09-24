@@ -1,29 +1,42 @@
-import React from 'react';
-import { Home, DollarSign, Calendar, ShoppingCart, Package, Book, Users, Layout, Mail, PenTool, Plus, Search } from 'lucide-react';
+import React, { useState } from 'react';
+import { Home, DollarSign, Calendar, ShoppingCart, Package, Book, Users, Layout, Mail, PenTool, Plus, Search, ChevronRight, ChevronLeft } from 'lucide-react';
 import './Dashboard.css';
 
 function Dashboard() {
+  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsSidebarCollapsed(!isSidebarCollapsed);
+  };
+
   return (
     <div className="dashboard">
-      <aside className="sidebar">
-        <div className="logo-container">
-          <img src={require("../images/logo.png")} alt="Logo" className="logo" />
+      <aside className={`sidebar ${isSidebarCollapsed ? 'collapsed' : ''}`}>
+        <div className="sidebar-header">
+          {/* 修正图片路径 */}
+          <img src="/images/logo.png" alt="Logo" className="logo" />
+          <button className="toggle-sidebar" onClick={toggleSidebar}>
+            {isSidebarCollapsed ? <ChevronRight size={24} /> : <ChevronLeft size={24} />}
+          </button>
         </div>
         <nav className="main-nav">
-          <a href="#" className="nav-item active"><Home size={20} /> Dashboard</a>
-          <a href="#" className="nav-item"><DollarSign size={20} /> Getting Paid</a>
-          <a href="#" className="nav-item"><Calendar size={20} /> Booking Calendar</a>
-          <a href="#" className="nav-item"><ShoppingCart size={20} /> Sales</a>
-          <a href="#" className="nav-item"><Package size={20} /> Catalog</a>
-          <a href="#" className="nav-item"><Book size={20} /> Online Programs</a>
-          <a href="#" className="nav-item"><PenTool size={20} /> Blog</a>
-          <a href="#" className="nav-item"><Users size={20} /> Groups</a>
-          <a href="#" className="nav-item"><Layout size={20} /> Apps</a>
-          <a href="#" className="nav-item"><Layout size={20} /> Site & Mobile App</a>
-          <a href="#" className="nav-item"><Mail size={20} /> Inbox</a>
-          <a href="#" className="nav-item"><Users size={20} /> Customers & Leads</a>
+          <a href="#" className="nav-item active"><Home size={24} /> <span>Dashboard</span></a>
+          <a href="#" className="nav-item"><DollarSign size={24} /> <span>Getting Paid</span></a>
+          <a href="#" className="nav-item"><Calendar size={24} /> <span>Booking Calendar</span></a>
+          <a href="#" className="nav-item"><ShoppingCart size={24} /> <span>Sales</span></a>
+          <a href="#" className="nav-item"><Package size={24} /> <span>Catalog</span></a>
+          <a href="#" className="nav-item"><Book size={24} /> <span>Online Programs</span></a>
+          <a href="#" className="nav-item"><PenTool size={24} /> <span>Blog</span></a>
+          <a href="#" className="nav-item"><Users size={24} /> <span>Groups</span></a>
+          <a href="#" className="nav-item"><Layout size={24} /> <span>Apps</span></a>
+          <a href="#" className="nav-item"><Layout size={24} /> <span>Site & Mobile App</span></a>
+          <a href="#" className="nav-item"><Mail size={24} /> <span>Inbox</span></a>
+          <a href="#" className="nav-item"><Users size={24} /> <span>Customers & Leads</span></a>
         </nav>
-        <button className="quick-add-btn"><Plus size={20} /> Quick Add</button>
+        <div className="sidebar-footer">
+          <button className="quick-add-btn"><Plus size={24} /> <span>Quick Add</span></button>
+          <button className="design-site-btn"><PenTool size={24} /> <span>Design Site</span></button>
+        </div>
       </aside>
       <main className="main-content">
         <header className="main-header">
@@ -31,7 +44,7 @@ function Dashboard() {
           <div className="header-actions">
             <button className="upgrade-btn">Upgrade</button>
             <div className="search-container">
-              <Search size={20} />
+              <Search size={24} />
               <input type="search" placeholder="Search for tools, apps, help & more..." />
             </div>
           </div>
