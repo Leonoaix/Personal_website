@@ -13,8 +13,8 @@ function Dashboard() {
     <div className="dashboard">
       <aside className={`sidebar ${isSidebarCollapsed ? 'collapsed' : ''}`}>
         <div className="sidebar-header">
-          {/* 修正图片路径 */}
-          <img src="/images/logo.png" alt="Logo" className="logo" />
+          {/* Image Path Updated */}
+          <img src="/src/pages/Dashboard/images/logo.png" alt="Logo" className="logo" />
           <button className="toggle-sidebar" onClick={toggleSidebar}>
             {isSidebarCollapsed ? <ChevronRight size={24} /> : <ChevronLeft size={24} />}
           </button>
@@ -74,23 +74,23 @@ function Dashboard() {
               <div className="progress" style={{width: '60%'}}></div>
             </div>
             <ul className="setup-steps">
-              <li className="setup-step completed">
+              <li className="setup-step completed" key="update-site-type">
                 <span className="step-title">Update your site type</span>
                 <span className="step-check">✓</span>
               </li>
-              <li className="setup-step">
+              <li className="setup-step" key="connect-domain">
                 <span className="step-title">Connect a custom domain</span>
                 <button className="step-action">Start</button>
               </li>
-              <li className="setup-step completed">
+              <li className="setup-step completed" key="review-menu">
                 <span className="step-title">Review your generated menu</span>
                 <span className="step-check">✓</span>
               </li>
-              <li className="setup-step completed">
+              <li className="setup-step completed" key="finish-services">
                 <span className="step-title">Finish setting up your services</span>
                 <span className="step-check">✓</span>
               </li>
-              <li className="setup-step">
+              <li className="setup-step" key="setup-payment-methods">
                 <span className="step-title">Set up payment methods</span>
                 <button className="step-action">Start</button>
               </li>

@@ -20,7 +20,7 @@ body, html {
 .dashboard {
   display: flex;
   min-height: 100vh;
-  background-image: url('/images/dashboard.jpg'); /* 修正路径为相对于public */
+  background-image: url('/images/dashboard.jpg'); /* Make sure this file is in public/images */
   background-size: cover;
   background-position: center;
 }
