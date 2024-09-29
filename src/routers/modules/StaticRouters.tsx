@@ -21,5 +21,4 @@ const StaticRouters = () => {
     </Routes>
   );
 };
-
 export default StaticRouters;
