@@ -1,7 +1,7 @@
 import React from 'react';
 import { Paper, Typography, TextField, Button } from '@mui/material';
-import personImg from './signup_person.png'; // Import person image
-import './Register.css'; // Import the CSS file
+import personImg from '../../assert/signup_person.png';
+import './Register.css';
 
 const Register: React.FC = () => {
     return (
@@ -24,8 +24,14 @@ const Register: React.FC = () => {
                         variant="subtitle1"
                         style={{ color: '#a6a6a6', marginBottom: '20px' }}
                     >
-                        Sign in to your account
+                        Sign up to your account
                     </Typography>
+                    <TextField
+                        label="Username"
+                        variant="outlined"
+                        fullWidth
+                        style={{ marginBottom: '15px' }}
+                    />
                     <TextField
                         label="Email/Account"
                         variant="outlined"
@@ -39,14 +45,8 @@ const Register: React.FC = () => {
                         fullWidth
                         style={{ marginBottom: '15px' }}
                     />
-                    <Typography
-                        variant="caption"
-                        style={{ color: '#a6a6a6', textAlign: 'right', cursor: 'pointer' }}
-                    >
-                        Forget my password
-                    </Typography>
                     <Button fullWidth className="register-button">
-                        Sign In
+                        Sign Up
                     </Button>
                 </div>
 
