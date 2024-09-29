@@ -1,8 +1,9 @@
 import { Route, Routes } from 'react-router-dom';
-import Login from '@/pages/Login/index.tsx';
+import Login from '@/pages/Login/Login.tsx';
 import Dashboard from '@/pages/DashBoard/index.tsx';
 import Register from '@/pages/Register/Register.tsx';
 import NotFound from '@/pages/Error/notFound';
+import ForgotPassword from '@/pages/ForgotPassword/ForgotPassword';
 
 /**
  * 静态路由配置
@@ -15,6 +16,7 @@ const StaticRouters = () => {
       <Route path="/" element={<Dashboard />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
+      <Route path="/forgot-password" element={<ForgotPassword />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
