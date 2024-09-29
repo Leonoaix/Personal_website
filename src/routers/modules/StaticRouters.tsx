@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import Login from '@/pages/Login/index.tsx';
 import Dashboard from '@/pages/DashBoard/index.tsx';
-import Register from '@/pages/Register/index.tsx';
+import Register from '@/pages/Register/Register.tsx';
 import NotFound from '@/pages/Error/notFound';
 
 /**
