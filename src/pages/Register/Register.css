@@ -1,0 +1,67 @@
+/* Full-page background */
+.register-page {
+  background-image: url('../../assert/signup_background.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+
+.register-form-container {
+  padding: 20px;
+  width: 600px;
+  height: 400px;
+  border-radius: 30px !important;
+  box-shadow: 0px 0px 40px 15px rgba(247, 247, 247, 0.7) !important;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(179, 48, 48, 0.9);
+  position: relative;
+  overflow: visible;
+  /* Make sure overflow is visible */
+  padding: 3rem;
+}
+
+
+/* Form styling */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+/* Image on the right */
+.register-person-image {
+  width: 40%;
+  height: auto;
+  margin-left: 20px; 
+  margin-top: 100px;
+  transform: translate(10px, 10px);
+}
+
+/* Button styling */
+.register-button {
+  background-color: #6C63FF !important;
+  color: #fff !important;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 8px;
+  text-transform: none;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+.register-button:hover {
+  background-color: #a352c6 !important;
+  color: #fff;
+}
