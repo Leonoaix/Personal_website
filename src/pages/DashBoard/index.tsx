@@ -13,8 +13,10 @@ function Dashboard() {
     <div className="dashboard">
       <aside className={`sidebar ${isSidebarCollapsed ? 'collapsed' : ''}`}>
         <div className="sidebar-header">
+
           {/* Image Path Updated */}
           <img src="/src/pages/Dashboard/images/logo.png" alt="Logo" className="logo" />
+
           <button className="toggle-sidebar" onClick={toggleSidebar}>
             {isSidebarCollapsed ? <ChevronRight size={24} /> : <ChevronLeft size={24} />}
           </button>
