@@ -1,9 +1,9 @@
 import { Route, Routes } from 'react-router-dom';
-import Login from '@/pages/Login/Login.tsx';
-import Dashboard from '@/pages/DashBoard/index.tsx';
-import Register from '@/pages/Register/Register.tsx';
-import NotFound from '@/pages/Error/notFound';
-import ForgotPassword from '@/pages/ForgotPassword/ForgotPassword';
+import Login from '../../pages/Login/Login.tsx';
+import Dashboard from '../../pages/DashBoard/index.tsx';
+import Register from '../../pages/Register/Register.tsx';
+import NotFound from '../../pages/Error/NotFound';
+import ForgotPassword from '../../pages/ForgotPassword/ForgotPassword';
 
 /**
  * 静态路由配置
